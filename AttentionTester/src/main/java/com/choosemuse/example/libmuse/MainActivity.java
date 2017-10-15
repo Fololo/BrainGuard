@@ -335,9 +335,13 @@ public class MainActivity extends Activity implements OnClickListener {
             Spinner musesSpinner = (Spinner) findViewById(R.id.muses_spinner);
 
             // Check that we actually have something to connect to.
-            if (availableMuses.size() > 0 ) {
+            if (availableMuses.size() > 0  || musesSpinner.getAdapter().getCount() > 0) {
                 Button But = (Button)findViewById(R.id.refresh);
                 But.setBackgroundResource(R.drawable.buttonconnected);
+            }
+            else {
+                Button But = (Button)findViewById(R.id.refresh);
+                But.setBackgroundResource(R.drawable.button);
             }
         }
         else if (v.getId() == R.id.connect) {
@@ -950,7 +954,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 updateBlinkIcon();
             }
             if (HSIStale) {
-                //updateQuality();
+                updateQuality();
             }
             if (alphaStale) {
                 //updateAlpha();
@@ -1044,14 +1048,55 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 
     private void updateQuality() {
-        TextView Quality0 = (TextView)findViewById(R.id.Quality0);
-        TextView Quality1 = (TextView)findViewById(R.id.Quality1);
-        TextView Quality2 = (TextView)findViewById(R.id.Quality2);
-        TextView Quality3 = (TextView)findViewById(R.id.Quality3);
-        Quality0.setText(String.format("%6.2f", HSIBuffer[0]));
-        Quality1.setText(String.format("%6.2f", HSIBuffer[1]));
-        Quality2.setText(String.format("%6.2f", HSIBuffer[2]));
-        Quality3.setText(String.format("%6.2f", HSIBuffer[3]));
+        ImageView Quality0 = (ImageView) findViewById(R.id.E1);
+        ImageView Quality1 = (ImageView) findViewById(R.id.E2);
+        ImageView Quality2 = (ImageView) findViewById(R.id.E3);
+        ImageView Quality3 = (ImageView) findViewById(R.id.E4);
+
+        switch ((int) HSIBuffer[0]){
+            case 1:
+                Quality0.setImageResource(R.drawable.circle);
+                break;
+            case 2:
+                Quality0.setImageResource(R.drawable.circleyellow);
+                break;
+            case 4:
+                Quality0.setImageResource(R.drawable.circlered);
+                break;
+        }
+        switch ((int) HSIBuffer[1]){
+            case 1:
+                Quality1.setImageResource(R.drawable.circle);
+                break;
+            case 2:
+                Quality1.setImageResource(R.drawable.circleyellow);
+                break;
+            case 4:
+                Quality1.setImageResource(R.drawable.circlered);
+                break;
+        }
+        switch ((int) HSIBuffer[2]){
+            case 1:
+                Quality2.setImageResource(R.drawable.circle);
+                break;
+            case 2:
+                Quality2.setImageResource(R.drawable.circleyellow);
+                break;
+            case 4:
+                Quality2.setImageResource(R.drawable.circlered);
+                break;
+        }
+        switch ((int) HSIBuffer[3]){
+            case 1:
+                Quality3.setImageResource(R.drawable.circle);
+                break;
+            case 2:
+                Quality3.setImageResource(R.drawable.circleyellow);
+                break;
+            case 4:
+                Quality3.setImageResource(R.drawable.circlered);
+                break;
+        }
     }
 
     private void updateAlpha() {

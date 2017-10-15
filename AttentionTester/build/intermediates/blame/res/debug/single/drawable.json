@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\circleyellow.xml",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\circleyellow.xml"
+    },
+    {
         "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\scorehigh.xml",
         "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\scorehigh.xml"
     },
@@ -16,8 +20,16 @@
         "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\score.xml"
     },
     {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\circlered.xml",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\circlered.xml"
+    },
+    {
         "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\buttonconnecting.xml",
         "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\buttonconnecting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\circle.xml",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\circle.xml"
     },
     {
         "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\background.xml",
