@@ -20,7 +20,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/brain"
+        android:icon="@drawable/logo"
         android:label="BrainGuard"
         android:theme="@style/AppTheme" >
         <activity

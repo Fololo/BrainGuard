@@ -86,7 +86,7 @@ MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Florian\Desktop
 	android:allowBackup
 		ADDED from C:\Users\Florian\Desktop\TMS_2017\Brainalyze-master-master\Brainalyze-master\AttentionTester\src\main\AndroidManifest.xml:19:9-35
 	android:icon
-		ADDED from C:\Users\Florian\Desktop\TMS_2017\Brainalyze-master-master\Brainalyze-master\AttentionTester\src\main\AndroidManifest.xml:20:9-39
+		ADDED from C:\Users\Florian\Desktop\TMS_2017\Brainalyze-master-master\Brainalyze-master\AttentionTester\src\main\AndroidManifest.xml:20:9-38
 	android:theme
 		ADDED from C:\Users\Florian\Desktop\TMS_2017\Brainalyze-master-master\Brainalyze-master\AttentionTester\src\main\AndroidManifest.xml:22:9-40
 activity#com.choosemuse.example.libmuse.MainActivity

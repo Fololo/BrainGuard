@@ -12,9 +12,10 @@ int drawable circleyellow 0x7f020008
 int drawable driver 0x7f020009
 int drawable eyeclosed 0x7f02000a
 int drawable eyeopen 0x7f02000b
-int drawable score 0x7f02000c
-int drawable scorehigh 0x7f02000d
-int drawable scoremedium 0x7f02000e
+int drawable logo 0x7f02000c
+int drawable score 0x7f02000d
+int drawable scorehigh 0x7f02000e
+int drawable scoremedium 0x7f02000f
 int id Beta0 0x7f08001c
 int id Beta1 0x7f08001d
 int id Beta2 0x7f08001e

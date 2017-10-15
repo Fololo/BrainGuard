@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\logo.png",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable-mdpi\\logo.png"
+    },
+    {
         "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\brain.png",
         "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable-mdpi\\brain.png"
     },

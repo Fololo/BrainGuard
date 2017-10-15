@@ -129,82 +129,86 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="3dp"
-        android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
         android:background="#96020202" />
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
+        android:layout_height="match_parent"
         android:background="#4d545454">
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
-            android:id="@+id/E1"
-            android:src="@drawable/circlered"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
-            android:id="@+id/E2"
-            android:src="@drawable/circlered"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
-            android:id="@+id/E3"
-            android:src="@drawable/circlered"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
-            android:id="@+id/E4"
-            android:src="@drawable/circlered"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:background="#4d545454">
-
-        <Button
-            android:id="@+id/refresh"
-            android:layout_margin="20dp"
-            android:layout_marginRight="50dp"
-            android:textColor="#FFFFFF"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:text="Find"
-            android:background="@drawable/button"/>
-        <Button
-            android:id="@+id/connect"
-            android:layout_marginLeft="50dp"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:textColor="#FFFFFF"
-            android:text="@string/connect"
-            android:background="@drawable/button"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:visibility="invisible"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10000dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal" >
-        <Spinner
-            android:id="@+id/muses_spinner"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/E1"
+                android:src="@drawable/circlered"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/E2"
+                android:src="@drawable/circlered"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/E3"
+                android:src="@drawable/circlered"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/E4"
+                android:src="@drawable/circlered"/>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/refresh"
+                android:layout_margin="20dp"
+                android:layout_marginRight="50dp"
+                android:textColor="#FFFFFF"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Find"
+                android:background="@drawable/button"/>
+            <Button
+                android:id="@+id/connect"
+                android:layout_marginLeft="50dp"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textColor="#FFFFFF"
+                android:text="@string/connect"
+                android:background="@drawable/button"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10000dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal" >
+            <Spinner
+                android:id="@+id/muses_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
 
 
