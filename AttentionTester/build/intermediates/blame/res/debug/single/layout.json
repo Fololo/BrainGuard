@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Florian\\Desktop\\libmuse_6.0.2\\android\\examples\\TestLibMuseAndroid\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Florian\\Desktop\\libmuse_6.0.2\\android\\examples\\TestLibMuseAndroid\\AttentionTester\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\layout\\test1.xml",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\layout\\test1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\layout\\headband_off.xml",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\layout\\headband_off.xml"
+    },
+    {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\layout\\popup_window.xml",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\layout\\popup_window.xml"
+    }
+]

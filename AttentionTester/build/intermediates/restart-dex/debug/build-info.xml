@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
+    density="xhdpi"
+    format="7"
+    timestamp="498599266392625" >
+
+    <task
+        name="javac"
+        duration="203" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="102" />
+    <task
+        name="verifier"
+        duration="52" />
+
+    <artifact
+        location="C:\Users\Florian\Desktop\libmuse_6.0.2\android\examples\TestLibMuseAndroid\AttentionTester\build\outputs\apk\AttentionTester-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="498599266392625" >
+        <artifact
+            location="C:\Users\Florian\Desktop\libmuse_6.0.2\android\examples\TestLibMuseAndroid\AttentionTester\build\outputs\apk\AttentionTester-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

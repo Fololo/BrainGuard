@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Florian\\Desktop\\libmuse_6.0.2\\android\\examples\\TestLibMuseAndroid\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\brain.png",
+        "source": "C:\\Users\\Florian\\Desktop\\libmuse_6.0.2\\android\\examples\\TestLibMuseAndroid\\AttentionTester\\src\\main\\res\\drawable-xxhdpi\\brain.png"
+    },
+    {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\brain.png",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable-xxhdpi\\brain.png"
+    },
+    {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\driver.png",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable-xxhdpi\\driver.png"
+    }
+]

@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/holo_blue_light">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="#3f3f3f"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:text="Is your Headband still in place?"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#3f3f3f"
+        android:gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:text="The signal quality is very weak. \nPlease adjust the Headband."/>
+
+</LinearLayout>

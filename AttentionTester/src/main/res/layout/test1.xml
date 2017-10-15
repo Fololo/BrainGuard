@@ -1,0 +1,343 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_marginBottom="20dp"
+	android:layout_marginTop="20dp"
+	android:layout_marginLeft="20dp"
+	android:layout_marginRight="20dp"
+	android:id="@+id/test">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+		<Spinner
+			android:id="@+id/muses_spinner"
+			android:layout_width="match_parent"
+			android:layout_height="60dp" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:orientation="horizontal" >
+		<Button
+			android:id="@+id/find"
+			android:layout_width="100dp"
+			android:layout_height="40dp"
+			android:text="Find" />
+		<Button
+			android:id="@+id/pair"
+			android:layout_width="100dp"
+			android:layout_height="40dp"
+			android:text="@string/connect" />
+		<Button
+			android:id="@+id/cancel"
+			android:layout_width="120dp"
+			android:layout_height="40dp"
+			android:text="@string/disconnect" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="20dp"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/connection"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:layout_weight="1"
+			android:textSize="16sp"
+			android:text="@string/undefined" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:orientation="horizontal" >
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.8"
+			android:gravity="center_vertical"
+			android:textSize="16sp"
+			android:text="Signal quality:" />
+
+		<TextView
+			android:id="@+id/Quality0"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/Quality1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/Quality2"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/Quality3"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+	</LinearLayout>
+
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:layout_marginBottom="10dp"
+		android:layout_marginTop="10dp"
+		android:background="#FF0000FF" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="center_horizontal"
+		android:orientation="horizontal" >
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.8"
+			android:textSize="16sp"
+			android:gravity="center_vertical"
+			android:text="Mean Values:" />
+		<TextView
+			android:id="@+id/alphamean"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/betamean"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/thetamean"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="center_horizontal"
+		android:orientation="horizontal" >
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.8"
+			android:textSize="16sp"
+			android:gravity="center_vertical"
+			android:text="Relaxation indicator" />
+		<TextView
+			android:id="@+id/elem1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/elem2"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/elem3"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/elem4"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+	</LinearLayout>
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:orientation="horizontal" >
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.8"
+			android:gravity="center_vertical"
+			android:textSize="16sp"
+			android:text="Awake \nindicator" />
+		<TextView
+			android:id="@+id/Beta0"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/Beta1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/Beta2"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/Beta3"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:orientation="horizontal" >
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.8"
+			android:gravity="center_vertical"
+			android:textSize="16sp"
+			android:text="Stress \nindicator" />
+		<TextView
+			android:id="@+id/Theta0"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/Theta1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:textSize="16sp"
+			android:gravity="center"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/Theta2"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+		<TextView
+			android:id="@+id/Theta3"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:text="@string/init_val" />
+	</LinearLayout>
+
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:layout_marginBottom="10dp"
+		android:layout_marginTop="10dp"
+		android:background="#FF0000FF" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:orientation="horizontal" >
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.8"
+			android:textSize="20sp"
+			android:text="Drowsiness Score:"
+			android:textColor="#ee0808" />
+
+		<TextView
+			android:id="@+id/Score"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textStyle="bold"
+			android:textSize="24sp"
+			android:text="@string/init_val"
+			android:textColor="#ee0808" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:orientation="horizontal" >
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.8"
+			android:textSize="20sp"
+			android:text="Eyeblinks per minute:"
+			android:textColor="#ee9a08" />
+		<TextView
+			android:id="@+id/Blinks_per_minute"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textSize="22sp"
+			android:text="@string/init_val"
+			android:textColor="#ee9a08" />
+	</LinearLayout>
+</LinearLayout>
