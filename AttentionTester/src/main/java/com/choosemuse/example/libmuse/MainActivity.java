@@ -12,6 +12,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -303,7 +304,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
         // Start up a thread for asynchronous file operations.
         // This is only needed if you want to do File I/O.
-        fileThread.start();
+        //fileThread.start();
 
         // Start our asynchronous updates of the UI.
         handler.post(tickUi);
@@ -330,7 +331,16 @@ public class MainActivity extends Activity implements OnClickListener {
             manager.stopListening();
             manager.startListening();
 
-        } else if (v.getId() == R.id.connect) {
+            List<Muse> availableMuses = manager.getMuses();
+            Spinner musesSpinner = (Spinner) findViewById(R.id.muses_spinner);
+
+            // Check that we actually have something to connect to.
+            if (availableMuses.size() > 0 ) {
+                Button But = (Button)findViewById(R.id.refresh);
+                But.setBackgroundResource(R.drawable.buttonconnected);
+            }
+        }
+        else if (v.getId() == R.id.connect) {
 
             // The user has pressed the "Connect" button to connect to
             // the headband in the spinner.
@@ -346,7 +356,8 @@ public class MainActivity extends Activity implements OnClickListener {
             // Check that we actually have something to connect to.
             if (availableMuses.size() < 1 || musesSpinner.getAdapter().getCount() < 1) {
                 Log.w(TAG, "There is nothing to connect to");
-            } else {
+            }
+            else {
 
                 // Cache the Muse that the user has selected.
                 muse = availableMuses.get(musesSpinner.getSelectedItemPosition());
@@ -391,25 +402,26 @@ public class MainActivity extends Activity implements OnClickListener {
                 muse.runAsynchronously();
             }
 
-        } else if (v.getId() == R.id.disconnect) {
+        }
+        //else if (v.getId() == R.id.disconnect) {
 
             // The user has pressed the "Disconnect" button.
             // Disconnect from the selected Muse.
-            if (muse != null) {
-                muse.disconnect();
-            }
-
-        } //else if (v.getId() == R.id.pause) {
+        //    if (muse != null) {
+        //        muse.disconnect();
+        //    }
+        //}
+        //else if (v.getId() == R.id.pause) {
 
             // The user has pressed the "Pause/Resume" button to either pause or
             // resume data transmission.  Toggle the state and pause or resume the
             // transmission on the headband.
-            if (muse != null) {
-                dataTransmission = !dataTransmission;
-                muse.enableDataTransmission(dataTransmission);
-            }
-        }
-    //}
+        //    if (muse != null) {
+        //        dataTransmission = !dataTransmission;
+        //        muse.enableDataTransmission(dataTransmission);
+        //    }
+        //}
+    }
 
     //--------------------------------------
     // Permissions
@@ -483,17 +495,29 @@ public class MainActivity extends Activity implements OnClickListener {
         final ConnectionState current = p.getCurrentConnectionState();
 
         // Format a message to show the change of connection state in the UI.
-        final String status = p.getPreviousConnectionState() + " -> " + current;
-        Log.i(TAG, status);
+        //final String status = p.getPreviousConnectionState() + " -> " + current;
+        //Log.i(TAG, status);
 
         // Update the UI with the change in connection state.
         handler.post(new Runnable() {
             @Override
             public void run() {
 
-                final TextView statusText = (TextView) findViewById(R.id.con_status);
-                statusText.setText(status);
+                //final TextView statusText = (TextView) findViewById(R.id.con_status);
+                //statusText.setText(status);
 
+                if (current == ConnectionState.CONNECTED){
+                    Button But = (Button)findViewById(R.id.connect);
+                    But.setBackgroundResource(R.drawable.buttonconnected);
+                }
+                else if (current == ConnectionState.DISCONNECTED){
+                    Button But = (Button)findViewById(R.id.connect);
+                    But.setBackgroundResource(R.drawable.buttondisconnected);
+                }
+                else if (current == ConnectionState.CONNECTING){
+                    View But = (Button)findViewById(R.id.connect);
+                    But.setBackgroundResource(R.drawable.buttonconnecting);
+                }
                 final MuseVersion museVersion = muse.getMuseVersion();
                 //final TextView museVersionText = (TextView) findViewById(R.id.version);
                 // If we haven't yet connected to the headband, the version information
@@ -692,18 +716,22 @@ public class MainActivity extends Activity implements OnClickListener {
     public void ArtifactHandler(final MuseArtifactPacket p, final Muse muse){
         if (p.getBlink()) {
 
+            blinkStale = true;
+
             // Muse detects 2 Artefacts per Eyeblink:
             // One for opening and one for closing the eyes
             BlinkCountAll++;
 
             // Get the actual number of Eyeblinks
-            if((p.getTimestamp() - lastblink) > 300000)
-            {
+            if((p.getTimestamp() - lastblink) < 300000){
+                EyeClosed = true;
+            }
+            else{
 
+                EyeClosed = false;
                 long intervall = p.getTimestamp() - lastblink;
                 lastblink = p.getTimestamp();
                 blinkCountReal++;
-                blinkStale = true;
 
                 // Calculate Blinks per Minute:
                 //if ((p.getTimestamp() - lastblinkminute) < 60000000) {
@@ -717,7 +745,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 if(intArray.size()==3) {
                     long diff = intArray.get(2) - intArray.get(0);
                     intArray.remove(0);
-                    if(diff < 2000000 && BlinkAlert==false)
+                    if(diff < 1000000 && BlinkAlert==false)
                     {
                         BlinkAlert = true;
                         intArray.clear();
@@ -737,9 +765,9 @@ public class MainActivity extends Activity implements OnClickListener {
            // PopupWindowHeadbandOff(findViewById(R.id.main));
         }
 
-        System.out.println("Blink Buffer --    " + blinkCountReal);
-        System.out.println("Blink Count --    " + BlinkCountAll);
-        System.out.println("Blink Alert --    " + BlinkAlert);
+        // System.out.println("Blink Buffer --    " + blinkCountReal);
+        // System.out.println("Blink Count --    " + BlinkCountAll);
+        // System.out.println("Blink Alert --    " + BlinkAlert);
     }
 
 
@@ -891,8 +919,8 @@ public class MainActivity extends Activity implements OnClickListener {
         refreshButton.setOnClickListener(this);
         Button connectButton = (Button) findViewById(R.id.connect);
         connectButton.setOnClickListener(this);
-        Button disconnectButton = (Button) findViewById(R.id.disconnect);
-        disconnectButton.setOnClickListener(this);
+        //Button disconnectButton = (Button) findViewById(R.id.disconnect);
+        //disconnectButton.setOnClickListener(this);
         //Button pauseButton = (Button) findViewById(R.id.pause);
         //pauseButton.setOnClickListener(this);
 
@@ -978,22 +1006,25 @@ public class MainActivity extends Activity implements OnClickListener {
 
     private void updateScore(){
         TextView Score = (TextView)findViewById(R.id.Index);
-        Score.setText(String.format("%6.2f", drowsinessScore));
-
         ProgressBar ScoreBar = (ProgressBar)findViewById(R.id.progressBar);
+
         if(drowsinessScore<4){
             Drawable bar = getResources().getDrawable(R.drawable.score);
             ScoreBar.setProgressDrawable(bar);
+            Score.setTextColor(Color.parseColor("#008000"));
         }
         else if (drowsinessScore<6){
             Drawable bar = getResources().getDrawable(R.drawable.scoremedium);
             ScoreBar.setProgressDrawable(bar);
+            Score.setTextColor(Color.parseColor("#FDB82B"));
         }
         else{
             Drawable bar = getResources().getDrawable(R.drawable.scorehigh);
             ScoreBar.setProgressDrawable(bar);
+            Score.setTextColor(Color.parseColor("#E24825"));
         }
 
+        Score.setText(String.format("%6.2f", drowsinessScore));
         ScoreBar.setProgress((int) drowsinessScore);
     }
 
