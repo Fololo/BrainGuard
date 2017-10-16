@@ -132,22 +132,26 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:id="@+id/E1"/>
+                android:id="@+id/E1"
+                android:src="@drawable/circle"/>
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="30dp"
-                android:id="@+id/E2"/>
+                android:id="@+id/E2"
+                android:src="@drawable/circle"/>
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="30dp"
-                android:id="@+id/E3"/>
+                android:id="@+id/E3"
+                android:src="@drawable/circle"/>
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="30dp"
-                android:id="@+id/E4"/>
+                android:id="@+id/E4"
+                android:src="@drawable/circle"/>
         </LinearLayout>
 
         <LinearLayout

@@ -18,6 +18,7 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
@@ -67,6 +68,7 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -199,6 +201,8 @@ public class MainActivity extends Activity implements OnClickListener {
     private long lastblink = 0;
     // private int Blinks_per_minute = 0;
     private boolean blinkStale = false;
+    private boolean blinkStaleLong = false;
+    private boolean blinkStaleShort = false;
     private boolean BlinkAlert = false;
 
     //private int JawChlenchCounter = 0;
@@ -721,19 +725,14 @@ public class MainActivity extends Activity implements OnClickListener {
     public void ArtifactHandler(final MuseArtifactPacket p, final Muse muse){
         if (p.getBlink()) {
 
-            blinkStale = true;
-
             // Muse detects 2 Artefacts per Eyeblink:
             // One for opening and one for closing the eyes
             BlinkCountAll++;
 
             // Get the actual number of Eyeblinks
-            if((p.getTimestamp() - lastblink) < 500000){
-                EyeClosed = true;
-            }
-            else{
-
-                EyeClosed = false;
+            if ((p.getTimestamp() - lastblink) > 500000){
+                blinkStale = true;
+                //blinkStaleLong = true;
                 long intervall = p.getTimestamp() - lastblink;
                 lastblink = p.getTimestamp();
                 blinkCountReal++;
@@ -758,6 +757,9 @@ public class MainActivity extends Activity implements OnClickListener {
                 }
                 intArray.add((p.getTimestamp()));
             }
+            //else {
+                //blinkStaleShort = true;
+            //}
         }
         //else if (p.getJawClench()) {
         //    JawChlenchCounter = JawChlenchCounter + 1;
@@ -934,6 +936,7 @@ public class MainActivity extends Activity implements OnClickListener {
         musesSpinner.setAdapter(spinnerAdapter);
     }
 
+
     /**
      * The runnable that is used to update the UI at 60Hz.
      *
@@ -952,29 +955,34 @@ public class MainActivity extends Activity implements OnClickListener {
             //}
             if(blinkStale){
                 updateBlinks();
-                updateBlinkIcon();
+                ImageView Eye = (ImageView)findViewById(R.id.Eye);
+
+                Eye.setImageResource(R.drawable.eyeclosed);
+                Eye.setImageResource(R.drawable.eyeopen);
+
+                //updateBlinkIcon();
             }
             if (HSIStale) {
                 updateQuality();
             }
-            if (alphaStale) {
+            //if (alphaStale) {
                 //updateAlpha();
                 //updateMean();
-            }
-            if (betaStale){
+            //}
+            //if (betaStale){
                 //updateBeta();
                 //updateMean();
-            }
+            //}
             //if (gammaStale){
 
             //}
             //if (deltaStale){
 
             //}
-            if (thetaStale){
+            //if (thetaStale){
                 //updateTheta();
                 //updateMean();
-            }
+            //}
             if (scoreStale){
                 updateScore();
             }
@@ -1040,15 +1048,12 @@ public class MainActivity extends Activity implements OnClickListener {
 
     private void updateBlinkIcon(){
         ImageView Eye = (ImageView)findViewById(R.id.Eye);
-        if(EyeClosed) {
-            Eye.setImageResource(R.drawable.eyeclosed);
-        }
-        else {
-            Eye.setImageResource(R.drawable.eyeopen);
-        }
+        Eye.setImageResource(R.drawable.eyeclosed);
+        Eye.setImageResource(R.drawable.eyeopen);
     }
 
-    private void updateQuality() {
+
+private void updateQuality() {
         ImageView Quality0 = (ImageView) findViewById(R.id.E1);
         ImageView Quality1 = (ImageView) findViewById(R.id.E2);
         ImageView Quality2 = (ImageView) findViewById(R.id.E3);
@@ -1098,11 +1103,11 @@ public class MainActivity extends Activity implements OnClickListener {
         }
         switch ((int) HSIBuffer[3]){
             case 1:
-            //    Quality3.setImageResource(R.drawable.circle);
+                Quality3.setImageResource(R.drawable.circle);
             //    Quality3.setVisibility(View.GONE);
                 break;
             case 2:
-            //    Quality3.setImageResource(R.drawable.circleyellow);
+               Quality3.setImageResource(R.drawable.circleyellow);
             //   Quality3.setVisibility(View.GONE);
                 break;
             case 4:
