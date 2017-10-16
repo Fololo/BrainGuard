@@ -2,22 +2,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3e64d8"
+    android:background="@drawable/background"
     android:id="@+id/main">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#4dffffff">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Driver:"
-            android:textColor="#111111"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:textSize="30dp"/>
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,6 +12,7 @@
         android:background="#4dffffff">
 
         <ImageView
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -35,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="23dp"
+            android:layout_marginTop="20dp"
             android:gravity="left"
             android:textSize="18dp"
             android:textColor="#111111"
@@ -65,7 +54,7 @@
             android:textSize="30dp"
             android:layout_marginTop="0dp"
             android:textStyle="bold"
-            android:textColor="#FF330d"
+            android:textColor="#2ecc71"
             android:text="0"/>
 
     </LinearLayout>
@@ -95,7 +84,7 @@
             android:layout_marginTop="0dp"
             android:textSize="30dp"
             android:textStyle="bold"
-            android:textColor="#FF330d"
+            android:textColor="#2ecc71"
             android:text="0.0"/>
     </LinearLayout>
 

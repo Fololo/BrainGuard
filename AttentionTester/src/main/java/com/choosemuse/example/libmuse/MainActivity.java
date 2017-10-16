@@ -1015,17 +1015,17 @@ public class MainActivity extends Activity implements OnClickListener {
         if(drowsinessScore<4){
             Drawable bar = getResources().getDrawable(R.drawable.score);
             ScoreBar.setProgressDrawable(bar);
-            Score.setTextColor(Color.parseColor("#008000"));
+            Score.setTextColor(Color.parseColor("#2ecc71"));
         }
         else if (drowsinessScore<6){
             Drawable bar = getResources().getDrawable(R.drawable.scoremedium);
             ScoreBar.setProgressDrawable(bar);
-            Score.setTextColor(Color.parseColor("#FDB82B"));
+            Score.setTextColor(Color.parseColor("#f1c40f"));
         }
         else{
             Drawable bar = getResources().getDrawable(R.drawable.scorehigh);
             ScoreBar.setProgressDrawable(bar);
-            Score.setTextColor(Color.parseColor("#E24825"));
+            Score.setTextColor(Color.parseColor("#e64c3c"));
         }
 
         Score.setText(String.format("%6.2f", drowsinessScore));
