@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\circleyellow.xml"
     },
     {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\driver.png",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\driver.png"
+    },
+    {
         "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\scorehigh.xml",
         "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\scorehigh.xml"
     },
@@ -32,6 +36,10 @@
         "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\circle.xml"
     },
     {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\eyeclosed.png",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\eyeclosed.png"
+    },
+    {
         "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\background.xml",
         "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\background.xml"
     },
@@ -42,5 +50,9 @@
     {
         "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\button.xml",
         "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\build\\intermediates\\res\\merged\\debug\\drawable\\eyeopen.png",
+        "source": "C:\\Users\\Florian\\Desktop\\TMS_2017\\Brainalyze-master-master\\Brainalyze-master\\AttentionTester\\src\\main\\res\\drawable\\eyeopen.png"
     }
 ]

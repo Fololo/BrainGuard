@@ -2,22 +2,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3e64d8"
+    android:background="@drawable/background"
     android:id="@+id/main">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#4dffffff">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Driver:"
-            android:textColor="#111111"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:textSize="30dp"/>
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,8 +12,9 @@
         android:background="#4dffffff">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/driver"/>
@@ -35,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="23dp"
+            android:layout_marginTop="20dp"
             android:gravity="left"
             android:textSize="18dp"
             android:textColor="#111111"
@@ -53,7 +42,7 @@
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:gravity="left"
-            android:textColor="#ffffff"
+            android:textColor="#ecf0f1"
             android:text="Counted Eyeblinks:"/>
 
         <TextView
@@ -65,7 +54,7 @@
             android:textSize="30dp"
             android:layout_marginTop="0dp"
             android:textStyle="bold"
-            android:textColor="#FF330d"
+            android:textColor="#27ae60"
             android:text="0"/>
 
     </LinearLayout>
@@ -84,18 +73,19 @@
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:gravity="center"
-            android:textColor="#ffffff"
-            android:text="Drowsiness Index:"/>
+            android:textColor="#ecf0f1"
+            android:text="Fatigue Index:"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Index"
+            android:gravity="center"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="0dp"
             android:textSize="30dp"
             android:textStyle="bold"
-            android:textColor="#FF330d"
+            android:textColor="#27ae60"
             android:text="0.0"/>
     </LinearLayout>
 
@@ -126,61 +116,52 @@
             android:progressDrawable="@drawable/score"/>
     </LinearLayout>
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="3dp"
-        android:layout_marginTop="10dp"
-        android:background="#96020202" />
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#4d545454">
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
-            android:gravity="center">
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/E1"/>
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="30dp"
-                android:id="@+id/E1"
-                android:src="@drawable/circlered"/>
+                android:id="@+id/E2"/>
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="30dp"
-                android:id="@+id/E2"
-                android:src="@drawable/circlered"/>
+                android:id="@+id/E3"/>
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="30dp"
-                android:id="@+id/E3"
-                android:src="@drawable/circlered"/>
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="30dp"
-                android:id="@+id/E4"
-                android:src="@drawable/circlered"/>
+                android:id="@+id/E4"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="40dp"
             android:gravity="center">
 
             <Button
                 android:id="@+id/refresh"
-                android:layout_margin="20dp"
-                android:layout_marginRight="50dp"
-                android:textColor="#FFFFFF"
+                android:layout_margin="0dp"
+                android:layout_marginRight="0dp"
+                android:textColor="#ecf0f1"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:text="Find"
@@ -190,7 +171,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
-                android:textColor="#FFFFFF"
+                android:textColor="#ecf0f1"
                 android:text="@string/connect"
                 android:background="@drawable/button"/>
         </LinearLayout>

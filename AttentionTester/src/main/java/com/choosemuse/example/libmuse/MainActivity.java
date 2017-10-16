@@ -695,11 +695,12 @@ public class MainActivity extends Activity implements OnClickListener {
         //System.out.println("Mean Beta --    " + meanbeta);
         //System.out.println("Mean Theta --    " + meantheta);
 
-        //if (!EEGAlert) {
+        if (!EEGAlert) {
             Alarm(ThresholdList, ThresholdPeriod);
             VibrationAlert(EEGAlert);
             VisualAlertEEG(EEGAlert);
-        //}
+            //SoundAlert(EEGAlert);
+        }
     }
 
     /**
@@ -727,7 +728,7 @@ public class MainActivity extends Activity implements OnClickListener {
             BlinkCountAll++;
 
             // Get the actual number of Eyeblinks
-            if((p.getTimestamp() - lastblink) < 300000){
+            if((p.getTimestamp() - lastblink) < 500000){
                 EyeClosed = true;
             }
             else{
@@ -1015,7 +1016,7 @@ public class MainActivity extends Activity implements OnClickListener {
         if(drowsinessScore<4){
             Drawable bar = getResources().getDrawable(R.drawable.score);
             ScoreBar.setProgressDrawable(bar);
-            Score.setTextColor(Color.parseColor("#2ecc71"));
+            Score.setTextColor(Color.parseColor("#27ae60"));
         }
         else if (drowsinessScore<6){
             Drawable bar = getResources().getDrawable(R.drawable.scoremedium);
@@ -1056,44 +1057,56 @@ public class MainActivity extends Activity implements OnClickListener {
         switch ((int) HSIBuffer[0]){
             case 1:
                 Quality0.setImageResource(R.drawable.circle);
+            //    Quality0.setVisibility(View.GONE);
                 break;
             case 2:
-                Quality0.setImageResource(R.drawable.circleyellow);
+                Quality0.setImageResource(R.drawable.circle);
+            //    Quality0.setVisibility(View.GONE);
                 break;
             case 4:
+                Quality0.setVisibility(View.VISIBLE);
                 Quality0.setImageResource(R.drawable.circlered);
                 break;
         }
         switch ((int) HSIBuffer[1]){
             case 1:
                 Quality1.setImageResource(R.drawable.circle);
+            //    Quality1.setVisibility(View.GONE);
                 break;
             case 2:
-                Quality1.setImageResource(R.drawable.circleyellow);
+                Quality1.setImageResource(R.drawable.circle);
+            //    Quality1.setVisibility(View.GONE);
                 break;
             case 4:
+                Quality1.setVisibility(View.VISIBLE);
                 Quality1.setImageResource(R.drawable.circlered);
                 break;
         }
         switch ((int) HSIBuffer[2]){
             case 1:
                 Quality2.setImageResource(R.drawable.circle);
+            //    Quality2.setVisibility(View.GONE);
                 break;
             case 2:
-                Quality2.setImageResource(R.drawable.circleyellow);
+                Quality2.setImageResource(R.drawable.circle);
+            //    Quality2.setVisibility(View.GONE);
                 break;
             case 4:
+                Quality2.setVisibility(View.VISIBLE);
                 Quality2.setImageResource(R.drawable.circlered);
                 break;
         }
         switch ((int) HSIBuffer[3]){
             case 1:
-                Quality3.setImageResource(R.drawable.circle);
+            //    Quality3.setImageResource(R.drawable.circle);
+            //    Quality3.setVisibility(View.GONE);
                 break;
             case 2:
-                Quality3.setImageResource(R.drawable.circleyellow);
+            //    Quality3.setImageResource(R.drawable.circleyellow);
+            //   Quality3.setVisibility(View.GONE);
                 break;
             case 4:
+                Quality3.setVisibility(View.VISIBLE);
                 Quality3.setImageResource(R.drawable.circlered);
                 break;
         }
