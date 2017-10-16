@@ -13,8 +13,8 @@
 
         <ImageView
             android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/driver"/>
@@ -125,7 +125,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#4d545454">
+        android:background="">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
