@@ -27,10 +27,11 @@ public final class R {
         public static final int driver=0x7f020009;
         public static final int eyeclosed=0x7f02000a;
         public static final int eyeopen=0x7f02000b;
-        public static final int logo=0x7f02000c;
-        public static final int score=0x7f02000d;
-        public static final int scorehigh=0x7f02000e;
-        public static final int scoremedium=0x7f02000f;
+        public static final int gregorbusdriver=0x7f02000c;
+        public static final int logo=0x7f02000d;
+        public static final int score=0x7f02000e;
+        public static final int scorehigh=0x7f02000f;
+        public static final int scoremedium=0x7f020010;
     }
     public static final class id {
         public static final int Beta0=0x7f08001c;

@@ -17,7 +17,7 @@
             android:layout_height="80dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="10dp"
-            android:src="@drawable/GregorBusdriver"/>
+            android:src="@drawable/gregorbusdriver"/>
 
         <TextView
             android:layout_width="wrap_content"
