@@ -958,6 +958,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 //Eye.setImageResource(R.drawable.eyeopen);
                 blinkStale = false;
 
+
             }
             handler.postDelayed(eyereopen, 500);
         }
