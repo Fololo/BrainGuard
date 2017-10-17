@@ -312,8 +312,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
         // Start our asynchronous updates of the UI.
         handler.post(tickUi);
+        handler.post(eyereopen);
+        handler.post(eyeclose);
     }
-
     protected void onPause() {
         super.onPause();
         // It is important to call stopListening when the Activity is paused
@@ -946,6 +947,38 @@ public class MainActivity extends Activity implements OnClickListener {
      * functions do some string allocation, so this reduces our memory
      * footprint and makes GC pauses less frequent/noticeable.
      */
+
+    private final Runnable eyereopen = new Runnable() {
+        @Override
+        public void run() {
+            if (blinkStale){
+
+                ImageView Eye = (ImageView)findViewById(R.id.Eye);
+                Eye.setImageResource(R.drawable.eyeopen);
+                //Eye.setImageResource(R.drawable.eyeopen);
+                blinkStale = false;
+
+            }
+            handler.postDelayed(eyereopen, 500);
+        }
+    };
+
+    private final Runnable eyeclose = new Runnable() {
+        @Override
+        public void run() {
+            if (blinkStale){
+                System.out.println("eyeopen --   " + blinkStale);
+                ImageView Eye = (ImageView)findViewById(R.id.Eye);
+                Eye.setImageResource(R.drawable.eyeclosed);
+
+                //Eye.setImageResource(R.drawable.eyeopen);
+
+            }
+            handler.postDelayed(eyeclose, 0);
+        }
+    };
+
+
     private final Runnable tickUi = new Runnable() {
         @Override
         public void run() {
@@ -955,10 +988,10 @@ public class MainActivity extends Activity implements OnClickListener {
             //}
             if(blinkStale){
                 updateBlinks();
-                ImageView Eye = (ImageView)findViewById(R.id.Eye);
+                //ImageView Eye = (ImageView)findViewById(R.id.Eye);
+                //Eye.setImageResource(R.drawable.eyeclosed);
 
-                Eye.setImageResource(R.drawable.eyeclosed);
-                Eye.setImageResource(R.drawable.eyeopen);
+                //Eye.setImageResource(R.drawable.eyeopen);
 
                 //updateBlinkIcon();
             }
